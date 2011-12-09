@@ -37,35 +37,6 @@ ellipsis_radius(h:int, w:int, theta):int =
   ww = eye.w(w)
   hh = eye.h(h)
 
-  // Mode 1
-  // do Canvas.save(ctx)
-  // do Canvas.set_stroke_style(ctx, {color=eye.border_color})
-  // do Canvas.set_line_width(ctx, eye.border_width)
-  // do Canvas.translate(ctx, eye.x(w), eye.y(h))
-  // do Canvas.begin_path(ctx)
-  // do Canvas.move_to(ctx, 0, -hh)
-  // do Canvas.quadratic_curve_to(ctx, ww, -hh, ww, 0)
-  // do Canvas.quadratic_curve_to(ctx, ww, hh, 0, hh)
-  // do Canvas.quadratic_curve_to(ctx, -ww, hh, -ww, 0)
-  // do Canvas.quadratic_curve_to(ctx, -ww, -hh, -0, -hh)
-  // do Canvas.stroke(ctx)
-  // do Canvas.restore(ctx)
-
-  // Mode 2
-  // do Canvas.save(ctx)
-  // do Canvas.translate(ctx, eye.x(w), eye.y(h))
-  // do Canvas.scale(ctx, Int.to_float(ww)/Int.to_float(hh), 1.)
-  // do Canvas.begin_path(ctx)
-  // do Canvas.arc(ctx, 0, 0, hh, 0., 2.*Math.PI, true)
-  // do Canvas.restore(ctx)
-
-  // do Canvas.save(ctx)
-  // do Canvas.set_stroke_style(ctx, {color=eye.border_color})
-  // do Canvas.set_line_width(ctx, eye.border_width)
-  // do Canvas.stroke(ctx)
-  // do Canvas.restore(ctx)
-
-  // Mode 3
   pts = 60
   r(angle) = ellipsis_radius(hh, ww, angle)
   next(i) =
